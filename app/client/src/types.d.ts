@@ -78,3 +78,14 @@ interface HealthCheckResponse {
   version: string;
   uptime_seconds: number;
 }
+
+// Generate Query Types
+interface GenerateQueryRequest {
+  // No input needed, uses current database schema
+}
+
+interface GenerateQueryResponse {
+  generated_query: string;
+  schema_context?: string;
+  error?: string;
+}

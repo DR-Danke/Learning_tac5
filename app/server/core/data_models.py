@@ -80,3 +80,12 @@ class HealthCheckResponse(BaseModel):
     tables_count: int
     version: str = "1.0.0"
     uptime_seconds: float
+
+# Generate Query Models
+class GenerateQueryRequest(BaseModel):
+    pass  # No input needed, uses current database schema
+
+class GenerateQueryResponse(BaseModel):
+    generated_query: str
+    schema_context: Optional[str] = None  # For debugging
+    error: Optional[str] = None
