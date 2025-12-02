@@ -82,6 +82,16 @@ h2 {
   gap: 1rem;
   margin-top: 1rem;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.query-controls > .primary-button {
+  flex-shrink: 0;
+}
+
+.query-controls > .secondary-button {
+  flex-shrink: 0;
 }
 
 /* Buttons */
@@ -122,6 +132,12 @@ h2 {
 .secondary-button:hover {
   background: var(--primary-color);
   color: white;
+}
+
+.secondary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .toggle-button {
